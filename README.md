@@ -1,4 +1,4 @@
-# Projeto-Catalogo
+# Projeto Catálogo
 
 ## Nesse projeto tinhamos como objetivo:
 
