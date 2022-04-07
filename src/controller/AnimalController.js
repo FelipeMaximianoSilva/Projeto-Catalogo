@@ -1,4 +1,5 @@
 import express from "express";
+import { response } from "express";
 import { dados } from "../model/animal.js";
 
 export const getIndex = async (req, res) => {
@@ -6,8 +7,12 @@ export const getIndex = async (req, res) => {
 };
 
 export const getRegistro = (req, res) => {
-  res.render("registro.ejs");
+  res.status(200).render("registro.ejs");
 };
+
+export const postRegistro = (req, res) => {
+  console.log(req)
+}
 
 export const getDetalhes = async (req, res) => {
   try {
@@ -16,7 +21,9 @@ export const getDetalhes = async (req, res) => {
       animais,
     });
   } catch (err) {
-    console.log(err);
+    res.status(500).send({
+      err: err.message,
+    });
   }
 };
 
@@ -27,7 +34,9 @@ export const getCaes = async (req, res) => {
       animais,
     });
   } catch (err) {
-    console.log(err);
+    res.status(500).send({
+      err: err.message,
+    });
   }
 };
 
@@ -64,27 +73,25 @@ export const getSobre = (req, res) => {
 export const getDeletarCaes = async (req, res) => {
   try {
     await dados.destroy({
-      where:{
-        id: req.params.id
-      }
-    })
-    res.redirect('/caes')
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).redirect("/caes");
+  } catch (err) {
+    res.status(500).send({err: err.message});
   }
-  catch(err){
-    res.send(err.message)
-  }
-}
+};
 
 export const getDeletarGatos = async (req, res) => {
   try {
     await dados.destroy({
-      where:{
-        id: req.params.id
-      }
-    })
-    res.redirect('/gatos')
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).redirect("/gatos");
+  } catch (err) {
+    res.status(500).send({err: err.message});
   }
-  catch(err){
-    res.send(err.message)
-  }
-}
+};

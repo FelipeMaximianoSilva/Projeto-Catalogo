@@ -28,97 +28,67 @@
     </nav>
     <div class="main-container">
       <div class="form-container">
-        <form>
-          <label for="name">Nome do animal:</label><br />
-          <input type="text" id="name" name="name" required /><br /><br />
-        </form>
-        <form>
-          <label for="name">Url da imagem:</label><br />
-          <input type="url" id="img-url" name="img-url" required /><br /><br />
-        </form>
-        <form>
+        <form action="/registro" method="post">
+          <label for="nome">Nome do animal:</label><br />
+          <input type="text" id="name" name="nome" required /><br /><br />
+
+          <label for="img">Url da imagem:</label><br />
+          <input type="text" id="img-url" name="img" required /><br /><br />
+
           <p>Qual é o tipo de animal?</p>
           <br />
-          <input type="radio" id="gato-form" name="tipo-animal" value="gato" />
-          <label for="gato">Gato</label><br />
-          <input
-            type="radio"
-            id="cachorro-form"
-            name="tipo-animal"
-            value="cachorro"
-          />
-          <label for="cachorro">Cachorro</label><br /><br />
-        </form>
-        <form>
+          <input type="radio" id="gato-form" name="tipo" value="gato" />
+          <label for="tipo">Gato</label><br />
+          <input type="radio" id="cachorro-form" name="tipo" value="cachorro" />
+          <label for="tipo">Cachorro</label><br /><br />
+
           <p>Macho ou Fêmea?</p>
           <br />
-          <input
-            type="radio"
-            id="macho-form"
-            name="genero-animal"
-            value="macho"
-          />
-          <label for="Macho">Macho</label><br />
-          <input
-            type="radio"
-            id="femea-form"
-            name="genero-animal"
-            value="femea"
-          />
-          <label for="Fêmea">Fêmea</label><br /><br />
-        </form>
-        <form>
+          <input type="radio" id="macho-form" name="genero" value="macho" />
+          <label for="genero">Macho</label><br />
+          <input type="radio" id="femea-form" name="genero" value="femea" />
+          <label for="genero">Fêmea</label><br /><br />
+
           <p>O animal precisa de tratamento médico?</p>
           <br />
-          <input
-            type="radio"
-            id="ferimento-sim"
-            name="ferimento-animal"
-            value="fer-sim"
-          />
-          <label for="fer-sim">Sim</label><br />
-          <input
-            type="radio"
-            id="ferimento-nao"
-            name="ferimento-animal"
-            value="fer-nao"
-          />
-          <label for="fer-nao">Não</label><br /><br />
-        </form>
-        <form>
-          <label for="tam-animal">Qual o porte do animal?</label>
-          <select id="porte-animal" name="porte-animal" required>
-            <option value="mini">Mini</option>
-            <option value="pequeno">Pequeno</option>
-            <option value="medio">Médio</option>
-            <option value="Grande">Grande</option>
-            <option value="Gigante">Gigante</option>
+          <input type="radio" id="ferimento-sim" name="medic" value="sim" />
+          <label for="medic">Sim</label><br />
+          <input type="radio" id="ferimento-nao" name="medic" value="nao" />
+          <label for="medic">Não</label><br /><br />
+
+          <label for="porte">Qual o porte do animal?</label>
+          <select type="number" id="porte-animal" name="porte" required>
+            <option value="1">Mini</option>
+            <option value="2">Pequeno</option>
+            <option value="3">Médio</option>
+            <option value="4">Grande</option>
+            <option value="5">Gigante</option>
           </select>
-        </form>
-        <p id="Div-forms"><b>Informações para contato</b></p>
-        <form>
-          <label for="name">Nome completo:</label><br />
-          <input type="text" id="name" name="name" required /><br /><br />
+
+          <p id="Div-forms"><b>Informações para contato</b></p>
+
+          <label for="infonome">Nome completo:</label><br />
+          <input type="text" id="nome" name="infonome" required /><br /><br />
           <label for="tel">Telefone para contato</label><br />
           <input
             type="tel"
-            name="ctt-tel"
+            name="tel"
             id="ctt-tel"
             pattern="[0-9]{2} [0-9]{5}-[0-9]{4}"
             placeholder="xx xxxxx-xxxx"
             required
           />
           <br /><br />
-          <label for="e-mail">E-Mail para Contato</label><br />
+          <label for="infoemail">E-Mail para Contato</label><br />
           <input
             type="email"
-            name="ctt-email"
+            name="infoemail"
             id="ctt-email"
             required
             placeholder="email@example.com"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           /><br /><br />
-          <input type="submit" value="Submit" />
+          <input type="submit"/>
         </form>
       </div>
     </div>

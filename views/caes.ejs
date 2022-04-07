@@ -32,8 +32,8 @@
     </nav>
     <main>
       <div class="main-container">
+        <% animais.forEach(element => { %> <% if (element.tipo == 'cachorro') { %>
         <div class="card-container">
-          <% animais.forEach(element => { %> <% if (element.tipo == false) { %>
           <div class="animal-card">
             <div class="animal-icons">
               <div class="edit-icons">
@@ -41,7 +41,7 @@
                 <a href="/deletarCaes/<%= element.id %>" style="color: black;"><span class="fa-solid fa-trash" id="btn-delete"></span></a>
               </div>
               <div>
-                <% if (element.medic) { %>
+                <% if (element.medic == 'sim') { %>
                 <span
                   class="fa-solid fa-house-medical-circle-exclamation fa-2xl"
                   style="color: rgb(255, 255, 255)"
@@ -69,7 +69,7 @@
               <p>Porte: Grande</p>
               <%} else {%>
               <p>Porte: Gigante</p>
-              <% } %> <% if (element.genero) { %>
+              <% } %> <% if (element.genero == 'macho') { %>
               <i class="fa-solid fa-mars fa-xl" style="color: blue"></i>
               <%} else {%>
               <i
@@ -82,8 +82,8 @@
               ><button type="button">Contato</button></a
             >
           </div>
-          <% } %> <% }) %>
         </div>
+        <% } %> <% }) %>
       </div>
     </main>
   </body>
