@@ -10,9 +10,57 @@ export const getRegistro = (req, res) => {
   res.status(200).render("registro.ejs");
 };
 
-export const postRegistro = (req, res) => {
-  console.log(req)
-}
+export const getEditar = async (req, res) => {
+  const animal = await dados.findByPk(req.params.id);
+  res.render("editar.ejs", {
+    animal,
+  });
+};
+
+export const postEditar = async (req, res) => {
+  try {
+    const { nome, img, tipo, genero, medic, porte, infonome, tel, infoemail } =
+      req.body;
+    await dados.update(
+      {
+        nome: nome,
+        img: img,
+        tipo: tipo,
+        genero: genero,
+        medic: medic,
+        porte: porte,
+        infonome: infonome,
+        tel: tel,
+        infoemail: infoemail,
+      },
+      { where: { id: req.params.id } }
+    );
+    res.status(200).redirect("/");
+  } catch (err) {
+    res.send(err.message);
+  }
+};
+
+export const postRegistro = async (req, res) => {
+  try {
+    const { nome, img, tipo, genero, medic, porte, infonome, tel, infoemail } =
+      req.body;
+    await dados.create({
+      nome,
+      img,
+      tipo,
+      genero,
+      medic,
+      porte,
+      infonome,
+      tel,
+      infoemail,
+    });
+    res.status(200).redirect("/");
+  } catch (err) {
+    res.send(err.message);
+  }
+};
 
 export const getDetalhes = async (req, res) => {
   try {
@@ -79,7 +127,7 @@ export const getDeletarCaes = async (req, res) => {
     });
     res.status(200).redirect("/caes");
   } catch (err) {
-    res.status(500).send({err: err.message});
+    res.status(500).send({ err: err.message });
   }
 };
 
@@ -92,6 +140,6 @@ export const getDeletarGatos = async (req, res) => {
     });
     res.status(200).redirect("/gatos");
   } catch (err) {
-    res.status(500).send({err: err.message});
+    res.status(500).send({ err: err.message });
   }
 };

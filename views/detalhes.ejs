@@ -23,7 +23,7 @@
         <li><a href="/caes">Cães</a></li>
         <li><a href="/gatos">Gatos</a></li>
         <li><a href="/registro">Registro</a></li>
-        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="">Sobre</a></li>
       </ul>
     </nav>
     <main>
@@ -41,19 +41,19 @@
           </div>
           <div class="info-animal">
 
-            <% if (animais.genero) { %>
+            <% if (animais.genero == 'macho') { %>
             <p class="gender-detalhes">Macho</p>
             <%} else {%>
             <p class="gender-detalhes">Fêmea</p>
             <% } %> 
 
-            <% if (animais.tipo) { %>
+            <% if (animais.tipo == 'gato') { %>
             <p class="tipo-detalhes">Gato</p>
             <%} else {%>
             <p class="tipo-detalhes">Cachorro</p>
             <% } %> 
 
-            <% if (animais.medic) { %>
+            <% if (animais.medic == 'sim') { %>
             <p class="medic-detalhes">Necessário tratamento veterinário</p>
             <%} else {%>
             <p class="medic-detalhes">Saudável</p>

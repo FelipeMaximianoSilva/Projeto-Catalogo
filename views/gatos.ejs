@@ -27,7 +27,7 @@
         <li><a href="caes">Cães</a></li>
         <li><a class="active" href="#">Gatos</a></li>
         <li><a href="registro">Registro</a></li>
-        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="">Sobre</a></li>
       </ul>
     </nav>
   </body>
@@ -38,7 +38,7 @@
         <div class="animal-card">
           <div class="animal-icons">
             <div class="edit-icons">
-              <span class="fa-regular fa-pen-to-square" id="btn-edit"></span></a>
+              <a href="/editar/<%= element.id %>" style="color: black;"><span class="fa-regular fa-pen-to-square" id="btn-edit"></span></a>
               <a href="/deletarCaes/<%= element.id %>" style="color: black;"><span class="fa-solid fa-trash" id="btn-delete"></span></a>
             </div>
             <div>
