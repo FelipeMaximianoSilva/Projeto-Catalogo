@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Projeto Gigi</title>
+  </head>
+  <body>
+    <header class="head-image">
+      <div class="head-image">
+        <img
+          src="../img/Gigi-header.jpg"
+          alt="Projeto Gigi com um desenho de gato"
+          class="head-image"
+        />
+      </div>
+    </header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/caes">Cães</a></li>
+        <li><a href="/gatos">Gatos</a></li>
+        <li><a href="/registro">Registro</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="main-container">
+        <div class="main-content">
+          <div class="left-element">
+            <h1><%= animais.nome %></h1>
+            <h3>Número de identificação: <%= animais.id %></h3>
+            <div class="img-detalhes">
+              <img
+                src="<%= animais.img %>"
+                alt="Imagem do animal a ser adotado"
+              />
+            </div>
+          </div>
+          <div class="info-animal">
+
+            <% if (animais.genero) { %>
+            <p class="gender-detalhes">Macho</p>
+            <%} else {%>
+            <p class="gender-detalhes">Fêmea</p>
+            <% } %> 
+
+            <% if (animais.tipo) { %>
+            <p class="tipo-detalhes">Gato</p>
+            <%} else {%>
+            <p class="tipo-detalhes">Cachorro</p>
+            <% } %> 
+
+            <% if (animais.medic) { %>
+            <p class="medic-detalhes">Necessário tratamento veterinário</p>
+            <%} else {%>
+            <p class="medic-detalhes">Saudável</p>
+            <% } %>
+
+            <% if (animais.porte == 1) { %>
+            <p class="porte-detalhes">Porte: Mini</p>
+            <%} else if (animais.porte == 2) {%>
+            <p class="porte-detalhes">Porte: Pequeno</p>
+            <%} else if (animais.porte == 3) {%>
+            <p class="porte-detalhes">Porte: Médio</p>
+            <%} else if (animais.porte == 4) {%>
+            <p class="porte-detalhes">Porte: Grande</p>
+            <%} else {%>
+            <p class="porte-detalhes">Porte: Gigante</p>
+            <% } %>
+            <p class="infonome-detalhes">Contato: <%= animais.infonome %></p>
+            <p class="tel-detalhes">Telefone: <%= animais.tel %></p>
+            <p class="email-detalhes">E-mail: <%= animais.infoemail %></p>
+            <div class="detalhes-buttons">
+              <a  href="mailto:<%= animais.infoemail %>"><button type="button">Contato via email</button></a>
+              <a  href="tel:<%= animais.tel %>"><button type="button">Contato via telefone</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="/js/script.js"></script>
+</html>

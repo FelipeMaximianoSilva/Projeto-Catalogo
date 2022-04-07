@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/14f4815201.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Projeto Gigi</title>
+  </head>
+  <body>
+    <header class="head-image">
+      <div class="head-image">
+        <img
+          src="../img/Gigi-header.jpg"
+          alt="Projeto Gigi com um desenho de gato"
+          class="head-image"
+        />
+      </div>
+    </header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a class="active" href="#">Cães</a></li>
+        <li><a href="gatos">Gatos</a></li>
+        <li><a href="registro">Registro</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="main-container">
+        <div class="card-container">
+          <% animais.forEach(element => { %> <% if (element.tipo == false) { %>
+          <div class="animal-card">
+            <div class="animal-icons">
+              <div class="edit-icons">
+                <span class="fa-regular fa-pen-to-square" id="btn-edit"></span></a>
+                <a href="/deletarCaes/<%= element.id %>" style="color: black;"><span class="fa-solid fa-trash" id="btn-delete"></span></a>
+              </div>
+              <div>
+                <% if (element.medic) { %>
+                <span
+                  class="fa-solid fa-house-medical-circle-exclamation fa-2xl"
+                  style="color: rgb(255, 255, 255)"
+                ></span>
+                <%} else {%>
+                <span
+                  class="fa-solid fa-house-medical-circle-check fa-2xl"
+                  style="color: rgb(255, 255, 255)"
+                ></span>
+                <% } %>
+              </div>
+            </div>
+            <div class="animal-img">
+              <img src="<%= element.img %>" alt="imagem de Gato para adoção" />
+            </div>
+            <div class="animal-info">
+              <p><%= element.nome %></p>
+              <% if (element.porte == 1) { %>
+              <p>Porte: Mini</p>
+              <%} else if (element.porte == 2) {%>
+              <p>Porte: Pequeno</p>
+              <%} else if (element.porte == 3) {%>
+              <p>Porte: Médio</p>
+              <%} else if (element.porte == 4) {%>
+              <p>Porte: Grande</p>
+              <%} else {%>
+              <p>Porte: Gigante</p>
+              <% } %> <% if (element.genero) { %>
+              <i class="fa-solid fa-mars fa-xl" style="color: blue"></i>
+              <%} else {%>
+              <i
+                class="fa-solid fa-venus fa-xl"
+                style="color: rgb(255, 0, 170)"
+              ></i>
+              <% } %>
+            </div>
+            <a href="detalhes/<%= element.id %>"
+              ><button type="button">Contato</button></a
+            >
+          </div>
+          <% } %> <% }) %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

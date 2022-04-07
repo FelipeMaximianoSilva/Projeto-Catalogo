@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+}
+
+body {
+  background-color: #ff7f50;
+}
+
+/*----------------------------------------------------------------*/
+/*-----------------------------HEADER-----------------------------*/
+/*----------------------------------------------------------------*/
+
+img.head-image {
+  width: 100%;
+  margin-top: 5px;
+  /* border-bottom: rgba(255, 255, 255, 0.685) solid 5px; */
+}
+
+div.head-image {
+  /* margin-top: 40px; */
+  width: 100%;
+}
+
+/*----------------------------------------------------------------*/
+/*-----------------------------NAVBAR-----------------------------*/
+/*----------------------------------------------------------------*/
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  width: 60px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #9e2a00;
+}
+
+/*----------------------------------------------------------------*/
+/*------------------------------BODY------------------------------*/
+/*----------------------------------------------------------------*/
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-align-last: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 1%;
+  border: rgba(255, 255, 255, 0.685) solid 5px;
+  border-radius: 7%;
+  background-color: #fc43006c;
+}
+
+.head-title {
+  color: white;
+  font-size: 250%;
+}
+
+.head-text {
+  color: white;
+  font-size: 150%;
+  margin: 15px 15px;
+  padding-top: 1%;
+}
+
+.index-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /* background-color: aqua; */
+}
+
+.each-img {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  /* background-color: red; */
+}
+
+.each-img p {
+  font-size: 140%;
+  color: white;
+  margin: 1% 0% 3% 0%;
+}
+
+.each-img img {
+  width: 50%;
+  height: 50%;
+  border: black solid 2px;
+  border-radius: 8%;
+  margin: 2% 0 2% 0;
+}
+
+#baby-gigi {
+  width: 80%;
+  height: 80%;
+}
+
+#gatinhas-img {
+  width: 90%;
+  height: 90%;
+}
+
+/*----------------------------------------------------------------*/
+/*------------------------------FORM------------------------------*/
+/*----------------------------------------------------------------*/
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-align-last: left;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding: 1% 0% 1% 5%;
+  border: rgba(255, 255, 255, 0.685) solid 5px;
+  border-radius: 7%;
+  background-color: #fc43006c;
+  color: white;
+  font-size: 120%;
+}
+
+.form-container p {
+  font-size: 150%;
+}
+
+.form-container label {
+  font-size: 120%;
+}
+
+.form-container label[for="name"],
+label[for="tam-animal"] {
+  font-size: 28px;
+}
+
+.form-container input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"],
+select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"] {
+  transition: width 0.4s ease-in-out;
+}
+
+input[type="text"]:focus {
+  width: 50%;
+}
+
+input[type="submit"] {
+  background-color: #ffffff;
+  border: white solid 2px;
+  border-radius: 10%;
+  color: #fe652e;
+  font-weight: bold;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#Div-forms {
+  font-size: 200%;
+}
+
+/*----------------------------------------------------------------*/
+/*------------------------------CARDS-----------------------------*/
+/*----------------------------------------------------------------*/
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 80%;
+  width: 80%;
+  max-height: 80%;
+  max-width: 80%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.animal-card {
+  display: flex;
+  flex-direction: column;
+  border: white solid 5px;
+  border-radius: 3%;
+  box-shadow: 5px 1px 2px black;
+  background-color: #fe652e;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.animal-card:hover {
+  transform: scale(1.05);
+  transition-delay: 0.8s;
+  transition-duration: 2s;
+}
+
+i {
+  padding: 1em;
+}
+
+.animal-img {
+  /* margin-top: 5%; */
+  margin-bottom: 5%;
+  width: 70%;
+  height: 100%;
+  border: white solid 3px;
+  background-color: white;
+}
+
+.animal-img img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  background-color: #ffffff;
+  border: white solid 2px;
+  border-radius: 10%;
+  color: #fe652e;
+  font-weight: bold;
+  padding: 16px 20px;
+  text-decoration: none;
+  /* margin: 0 0 3em 0; */
+  cursor: pointer;
+}
+
+.animal-icons {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  gap: 0.8rem;
+}
+
+.animal-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.animal-info p {
+  font-size: 1.8rem;
+  padding-top: 5%;
+  color: white;
+}
+
+/* 769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens. */
+/* 320-480px */
+
+@media screen and (min-width: 768px) {
+  .animal-card {
+    width: 500px;
+    height: 600px;
+  }
+
+  .animal-card img {
+    width: 350px;
+    height: 282px;
+  }
+
+  button {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .animal-card {
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+  }
+  .animal-info p {
+    font-size: 1.3rem;
+  }
+
+  i {
+    padding: 0.8em;
+  }
+
+  button {
+    padding: 5px 10px;
+    margin: 8px;
+  }
+}
+
+/*-------------------------------------------------------------------*/
+/*------------------------------DETALHES-----------------------------*/
+/*-------------------------------------------------------------------*/
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 70%;
+  margin: 5%;
+  padding: 2% 3%;
+  gap: 4%;
+  border: rgba(255, 255, 255, 0.685) solid 5px;
+  border-radius: 7%;
+  background-color: #fc43006c;
+  color: white;
+  font-size: 120%;
+}
+
+.main-content h1,
+h3 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 2%;
+}
+
+.img-detalhes img {
+  border-radius: 3%;
+  width: 500px;
+  height: 500px;
+}
+
+.info-animal {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+  padding: 2%;
+  margin-top: 5%;
+}
+
+.info-animal p {
+  font-size: 1.7rem;
+}
+
+.left-element {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1362px) {
+  .info-animal p {
+    font-size: 1.2rem;
+  }
+}
+
+.detalhes-buttons {
+  gap: 3px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1238px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-content p {
+    font-size: 1.4rem;
+  }
+}
+
+/*----------------------------------------------------------------*/
+/*------------------------------SOBRE-----------------------------*/
+/*----------------------------------------------------------------*/
+
+.main-sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
